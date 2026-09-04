@@ -1,0 +1,25 @@
+class Student {
+    String name;
+    double attendance;
+    static String collegeName = "SRM Institute of Science and Technology";
+    static int studentCount = 0;
+    Student(String name, double attendance) {
+        this.name = name;
+        this.attendance = attendance;
+        studentCount++;
+    }
+    static void printCollegeInfo() {
+        System.out.println(collegeName);
+        System.out.println("Students on record: " + studentCount);
+    }
+}
+public class w3q5 {
+    public static void main(String[] args) {
+        createStudents();
+        Student.printCollegeInfo();
+    }
+    static void createStudents() {
+        new Student("Ravi", 90);
+        new Student("Anitha", 85);
+    }
+}
